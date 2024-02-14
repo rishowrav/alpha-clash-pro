@@ -30,7 +30,7 @@
         class="home min-h-screen flex flex-col items-center text-center justify-center"
       >
         <div class="flex flex-col items-center gap-4">
-          <h1 class="text-8xl poppins-bold uppercase">Alpha Clash Pro</h1>
+          <h1 class="text-8xl poppins-bold uppercase">Clash Pro</h1>
           <p>Unleash Your Keyboard Kun g Fu : Press "Enter" to Play</p>
           <button onclick="play()" class="btn w-36">Play Now</button>
         </div>
@@ -50,7 +50,7 @@
               </div>
               <div class="flex justify-center items-center h-full">
                 <p
-                  id="display-aphabet"
+                  id="display-alphabet"
                   class="text-black poppins-bold text-9xl uppercase"
                 >
                   Y
@@ -97,15 +97,19 @@
           <!-- life score -->
           <div class="flex justify-center">
             <div class="flex justify-between w-3/4">
-              <button class="btn rounded-full bg-[#894189] border-[#894189]">
+              <button
+                class="btn text-white rounded-full bg-[#894189] border-[#894189]"
+              >
                 Life
                 <img src="images/lo.png" alt="" />
-                <span>1</span>
+                <span id="current-life">5</span>
               </button>
-              <button class="btn rounded-full bg-[#894189] border-[#894189]">
+              <button
+                class="btn rounded-full text-white bg-[#894189] border-[#894189]"
+              >
                 score
                 <img src="images/do.png" alt="" />
-                <span>1</span>
+                <span id="current-score">0</span>
               </button>
             </div>
           </div>
@@ -113,6 +117,7 @@
       </section>
       <!-- Score -->
       <section
+        id="final-score"
         class="score hidden flex justify-center items-center min-h-screen"
       >
         <div
@@ -120,9 +125,11 @@
         >
           <h1 class="text-6xl">
             <span class="poppins-extrabold">Score: </span>
-            <span>14</span>
+            <span id="game-score">14</span>
           </h1>
-          <button class="btn bg--white text-black">Play Again</button>
+          <button onclick="play()" class="btn bg--white text-black">
+            Play Again
+          </button>
           <p>Practice will make you a pro</p>
         </div>
       </section>
